@@ -1,10 +1,11 @@
-import { Contacts } from "features/contacts/Contacts";
 import { Route, Routes } from 'react-router-dom';
 import { paths } from "paths";
-import LoginForm from "features/login/Login";
-import { Register } from "features/login/Register";
-import { Main } from "features/Main";
-import NotFound from "features/NotFound/NotFound";
+import { Main } from 'pages/Main/Main';
+import { Contacts } from 'pages/Contacts/Contacts';
+import Login from 'pages/Login/Login';
+import NotFound from 'pages/NotFound/NotFound';
+import { Register } from 'pages/Register/RegisterPage';
+
 
 export default function App() {
 
@@ -12,7 +13,7 @@ export default function App() {
         <Routes>
             <Route path={paths.main} element={<Main />}>
                 <Route index element={<Contacts />} />
-                <Route path={paths.login} element={<LoginForm />} />
+                <Route path={paths.login} element={<Login />} />
                 <Route path={paths.register} element={<Register />} />
             </Route>
             <Route path="*" element={<NotFound />} />

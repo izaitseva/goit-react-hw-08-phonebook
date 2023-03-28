@@ -1,0 +1,12 @@
+.link {
+    display: inline-block;
+    margin: 0 5px;
+    text-decoration: none;
+    color: rgb(48, 48, 48);
+}
+
+.link:hover,
+.link:focus,
+.link:global(.active) {
+    color: blueviolet;
+}
