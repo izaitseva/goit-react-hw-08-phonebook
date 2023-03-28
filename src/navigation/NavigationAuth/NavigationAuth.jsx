@@ -1,6 +1,7 @@
 import { paths } from "paths"
 import { NavLink } from "react-router-dom"
 import styles from "./NavigationAuth.module.css"
+
 const Navbar = () => {
 
     return (

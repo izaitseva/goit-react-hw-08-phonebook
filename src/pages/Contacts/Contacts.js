@@ -3,7 +3,7 @@ import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import "./Contacts.css";
 
-import fetchContacts from "store/contactsAPI";
+import fetchContacts from "api/contactsAPI";
 import useUser from "features/hooks/UseUser";
 import CreateContacts from "features/contacts/CreateContacts";
 import ContactsList from "features/contacts/ContactsList";

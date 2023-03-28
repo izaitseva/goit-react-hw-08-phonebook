@@ -1,7 +1,7 @@
 import { useSelector, useDispatch } from "react-redux";
 import { FaUserMinus } from "react-icons/fa";
 import "./ContactList.css";
-import { deleteContact } from "store/contactsAPI";
+import { deleteContact } from "api/contactsAPI";
 
 import { selectFilteredContacts } from "store/selectors";
 

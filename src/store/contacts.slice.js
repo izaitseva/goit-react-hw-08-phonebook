@@ -1,12 +1,10 @@
 import { createSlice } from "@reduxjs/toolkit";
-import fetchContacts, { deleteContact, addContact } from "./contactsAPI";
+import fetchContacts, { deleteContact, addContact } from "../api/contactsAPI";
 
 
 const initialState = {
     contacts: {
         items: [],
-        token: "",
-        isLogin: false,
         isLoading: false,
         error: null
     },
@@ -23,15 +21,6 @@ const contactsSlice = createSlice({
     },
     extraReducers: (builder) => {
         builder
-            // .addCase(signup.pending, (state) => {
-            //     state.contacts.isLoading = true;
-            //     state.contacts.error = null;
-            // })
-            // .addCase(signup.fulfilled, (state) => {
-            //     state.contacts.isLoading = true;
-            //     state.contacts.error = null;
-            // })
-
             .addCase(fetchContacts.pending, (state) => {
                 state.contacts.isLoading = true;
                 state.contacts.error = null;

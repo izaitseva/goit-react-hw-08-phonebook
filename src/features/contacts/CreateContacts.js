@@ -1,6 +1,6 @@
 import { FaUserPlus } from "react-icons/fa";
 import { useState } from "react";
-import { addContact } from "store/contactsAPI";
+import { addContact } from "api/contactsAPI";
 import { useDispatch, useSelector } from "react-redux";
 import styles from "./CreateContacts.module.css";
 

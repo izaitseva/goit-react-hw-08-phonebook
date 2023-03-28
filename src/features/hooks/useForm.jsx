@@ -1,6 +1,6 @@
 const { useState } = require("react")
 
-const useForm = ({ initialState, onsubmit }) => {
+const useForm = ({ initialState, onSubmit }) => {
 
     const [state, setState] = useState({ ...initialState });
 
@@ -8,14 +8,14 @@ const useForm = ({ initialState, onsubmit }) => {
         setState(prevState => {
             const { name, value, checked, type } = target;
             const newValue = type === "checkbox" ? checked : value;
-
+            console.log(newValue);
             return { ...prevState, [name]: newValue }
         })
     }
 
     const handleSubmit = (e) => {
-        e.prevent.default();
-        onsubmit({ ...state });
+        e.preventDefault();
+        onSubmit({ ...state });
         setState({ ...initialState })
     }
     return { state, setState, handleChange, handleSubmit };
