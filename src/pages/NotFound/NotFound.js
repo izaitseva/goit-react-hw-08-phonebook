@@ -2,7 +2,7 @@ import { NavLink } from "react-router-dom";
 import { paths } from "paths";
 import styles from "./NotFound.module.css";
 import notfound from "./notfound.svg"
-import Button from "features/Shared Components/Button/Button";
+import Button from "features/SharedComponents/Button/Button";
 
 export default function NotFound() {
 

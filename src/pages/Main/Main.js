@@ -2,12 +2,14 @@ import { Outlet } from "react-router"
 import { Navigation } from "../../navigation/Navigation"
 import styles from "./Main.modules.css"
 
+import AuthLayout from "modules/Authlayout/AuthLayout"
+
 export const Main = () => {
 
     return (
-        <div className={styles.main_container}>
+        <AuthLayout className={styles.main_container}>
             <Navigation />
             <Outlet />
-        </div>
+        </AuthLayout>
     )
 }

@@ -6,7 +6,6 @@ import NotFound from 'pages/NotFound/NotFound';
 import { Register } from 'pages/Register/RegisterPage';
 import Login from 'pages/Login/LoginPage';
 
-
 export default function App() {
 
     return (

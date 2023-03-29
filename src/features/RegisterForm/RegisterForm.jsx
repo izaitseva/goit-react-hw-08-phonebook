@@ -2,8 +2,8 @@ import useForm from "features/hooks/useForm";
 import initialState from "./initialState";
 import styles from "./RegisterForm.module.css";
 import fields from "./fields";
-import TextField from "features/Shared Components/TextField/TextField";
-import Button from "features/Shared Components/Button/Button";
+import TextField from "features/SharedComponents/TextField/TextField";
+import Button from "features/SharedComponents/Button/Button";
 
 const RegisterForm = ({ onSubmit }) => {
     const { state, handleChange, handleSubmit } = useForm({ initialState, onSubmit });

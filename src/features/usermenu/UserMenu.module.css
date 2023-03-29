@@ -5,12 +5,11 @@
 }
 
 .link {
+    text-align: center;
     text-decoration: none;
-    display: block;
     font-size: 50px;
     padding-right: 15px;
     color: rgb(48, 48, 48);
-    line-height: 80px;
     border-right: 1px solid blueviolet;
 }
 
@@ -21,4 +20,10 @@
 
 .activeLink {
     color: blueviolet;
+}
+
+.user_name {
+    display: flex;
+    margin-left: inherit;
+    font-size: larger;
 }

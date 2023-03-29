@@ -1,9 +1,9 @@
 import useForm from "features/hooks/useForm";
-import TextField from "features/Shared Components/TextField/TextField";
-import Button from "features/Shared Components/Button/Button";
 import initialState from "./initialState";
 import fields from "./fields";
 import styles from "./LoginForm.module.css";
+import TextField from "features/SharedComponents/TextField/TextField";
+import Button from "features/SharedComponents/Button/Button";
 
 const LoginForm = ({ onSubmit }) => {
     const { state, handleChange, handleSubmit } = useForm({ initialState, onSubmit });
