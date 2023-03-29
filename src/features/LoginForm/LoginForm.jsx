@@ -1,21 +1,20 @@
 import useForm from "features/hooks/useForm";
-import initialState from "./initialState";
-import fields from "./fields";
 import TextField from "features/Shared Components/TextField/TextField";
 import Button from "features/Shared Components/Button/Button";
+import initialState from "./initialState";
+import fields from "./fields";
 
-const RegisterForm = ({ onSubmit }) => {
+const LoginForm = ({ onSubmit }) => {
     const { state, handleChange, handleSubmit } = useForm({ initialState, onSubmit });
-    const { name, email, password } = state;
+    const { email, password } = state;
 
     return (
         <form onSubmit={handleSubmit}>
-            <TextField value={name} handleChange={handleChange} {...fields.name} />
             <TextField value={email} handleChange={handleChange} {...fields.email} />
             <TextField value={password} handleChange={handleChange} {...fields.password} />
-            <Button>Register</Button>
+            <Button>Login</Button>
         </form>
     )
 }
 
-export default RegisterForm;
+export default LoginForm;

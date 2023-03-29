@@ -2,9 +2,9 @@ import { Route, Routes } from 'react-router-dom';
 import { paths } from "paths";
 import { Main } from 'pages/Main/Main';
 import { Contacts } from 'pages/Contacts/Contacts';
-import Login from 'pages/Login/Login';
 import NotFound from 'pages/NotFound/NotFound';
 import { Register } from 'pages/Register/RegisterPage';
+import Login from 'pages/Login/LoginPage';
 
 
 export default function App() {
