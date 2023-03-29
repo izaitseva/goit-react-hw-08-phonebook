@@ -10,12 +10,16 @@ export const UserMenu = () => {
 
     const { name } = useSelector(getUser);
 
+    const handlerLogOut = () => {
+        
+    }
+
     return (
         <div>
             <div className={styles.user_menu}>
                 <NavLink className={styles.link} to={paths.main}>Contacts</NavLink>
                 <p>{name}</p>
-                <Button>Logout</Button>
+                <Button onClick={handlerLogOut}>Logout</Button>
             </div>
         </div>
     )

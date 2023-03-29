@@ -9,7 +9,6 @@ export const Navigation = () => {
     const isLogin = useSelector(isUserLogin)
 
     return (
-
         <>
             {!isLogin &&
                 <Navbar />

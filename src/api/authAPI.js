@@ -14,7 +14,8 @@ const setToken = token => {
 export const signup = async (data) => {
     const { data: result } = await instance.post('/users/signup', data);
     setToken(result.token)
-    return result
+    console.log(result);
+    return result;
 }
 
 export const login = async (data) => {
@@ -22,3 +23,19 @@ export const login = async (data) => {
     setToken(result.token)
     return result
 }
+
+export const getCurrent = async (token) => {
+
+    try {
+        setToken(token);
+        const { data } = await instance.get('/users/current');
+        return data;
+
+    } catch (error) {
+        setToken();
+        throw error;
+    }
+
+}
+
+export default instance; 

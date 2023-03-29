@@ -11,6 +11,7 @@ const ContactsList = () => {
     const dispatch = useDispatch();
     const onDeleteContacts = (id) => {
         dispatch(deleteContact(id));
+        console.log(id);
     }
 
     return (
