@@ -22,18 +22,3 @@
 .activeLink {
     color: blueviolet;
 }
-
-.logout_btn {
-    color: white;
-    background-color: blueviolet;
-    width: 200px;
-    height: 50px;
-    border-radius: 20px;
-    border: none;
-    cursor: pointer;
-}
-
-.logout_btn:hover {
-    border: 2px solid blueviolet;
-    background-color: rgb(167, 108, 221);
-}

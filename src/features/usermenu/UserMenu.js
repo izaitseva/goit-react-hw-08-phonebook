@@ -4,6 +4,7 @@ import { paths } from "paths";
 import { getUser } from "redux/auth/auth-selector";
 
 import styles from "./UserMenu.module.css"
+import Button from "features/Shared Components/Button/Button";
 
 export const UserMenu = () => {
 
@@ -14,7 +15,7 @@ export const UserMenu = () => {
             <div className={styles.user_menu}>
                 <NavLink className={styles.link} to={paths.main}>Contacts</NavLink>
                 <p>{name}</p>
-                <button className={styles.logout_btn}>Logout</button>
+                <Button>Logout</Button>
             </div>
         </div>
     )
