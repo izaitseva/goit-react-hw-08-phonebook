@@ -1,0 +1,11 @@
+.container {
+    margin: auto;
+    max-width: 410px;
+    margin: auto;
+}
+
+.btn_div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
