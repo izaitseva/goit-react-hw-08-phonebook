@@ -2,7 +2,6 @@ import { Outlet } from "react-router"
 import { Navigation } from "../../navigation/Navigation"
 import styles from "./Main.module.css"
 
-import AuthLayout from "modules/Authlayout/AuthLayout"
 import { useSelector } from "react-redux"
 import { getUser, isUserLogin } from "redux/auth/auth-selector"
 
@@ -23,10 +22,8 @@ export const Main = () => {
                     phonebook
                 </h1>
             }
-            <AuthLayout className={styles.main_container}>
-                <Navigation />
-                <Outlet />
-            </AuthLayout>
+            <Navigation />
+            <Outlet />
         </>
     )
 }

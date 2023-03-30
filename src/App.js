@@ -6,14 +6,19 @@ import NotFound from 'pages/NotFound/NotFound';
 import { Register } from 'pages/Register/RegisterPage';
 import Login from 'pages/Login/LoginPage';
 
+import PrivateRoute from 'modules/Authlayout/PrivateRoute';
+
+
 export default function App() {
 
     return (
         <Routes>
             <Route path={paths.main} element={<Main />}>
-                <Route index element={<Contacts />} />
                 <Route path={paths.login} element={<Login />} />
                 <Route path={paths.register} element={<Register />} />
+                <Route element={PrivateRoute}>
+                    <Route path={paths.contacts} element={<Contacts />} />
+                </Route>
             </Route>
             <Route path="*" element={<NotFound />} />
         </Routes >

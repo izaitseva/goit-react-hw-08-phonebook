@@ -8,7 +8,7 @@ const AuthLayout = ({ children }) => {
 
     useEffect(() => {
         dispatch(current())
-    }, [dispatch])
+    },);
 
     return (
         <div className={styles.layout}>{children}</div>

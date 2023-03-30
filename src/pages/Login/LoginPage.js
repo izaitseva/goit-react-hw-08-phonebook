@@ -16,7 +16,7 @@ function Login() {
     }
 
     if (isLogin) {
-        return <Navigate to={paths.main} />
+        return <Navigate to={paths.contacts} />
     }
 
     return (

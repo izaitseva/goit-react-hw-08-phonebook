@@ -7,17 +7,20 @@ import './index.css';
 
 import { BrowserRouter } from 'react-router-dom';
 import { store, persistor } from './store/store';
+import AuthLayout from 'modules/Authlayout/AuthLayout';
 
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
-    <BrowserRouter basename="/goit_hw_8">
-      <Provider store={store}>
-        <PersistGate loading={null} persistor={persistor}>
-          <App />
-        </PersistGate>
-      </Provider>
-    </BrowserRouter>
-  </React.StrictMode>
+  // <React.StrictMode>
+    <Provider store={store}>
+      <PersistGate loading={null} persistor={persistor}>
+        <AuthLayout>
+          <BrowserRouter basename="/">
+            <App />
+          </BrowserRouter>
+        </AuthLayout>
+      </PersistGate>
+    </Provider>
+  // </React.StrictMode>
 );

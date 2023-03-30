@@ -21,28 +21,24 @@ export const Contacts = () => {
     }, [dispatch, isLogin])
 
     const contacts = useSelector((state => state.contacts.contacts.items));
-    
+
 
     return (
         <div className="container">
-            {isLogin &&
-                <>
-
-                    <CreateContacts />
-
-                    <div>
-                        {contacts.length === 0 &&
-                            < p > You don't have contacts yet</p>
-                        }
-                        {contacts.length > 0 &&
-                            <>
-                                <ContactsList />
-                                <FilterContacts />
-                            </>
-                        }
-                    </div>
-                </>
-            }
+            <>
+                <CreateContacts />
+                <div>
+                    {contacts.length === 0 &&
+                        < p > You don't have contacts yet</p>
+                    }
+                    {contacts.length > 0 &&
+                        <>
+                            <ContactsList />
+                            <FilterContacts />
+                        </>
+                    }
+                </div>
+            </>
         </div >
     )
 }
