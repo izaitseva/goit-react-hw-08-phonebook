@@ -22,8 +22,8 @@ export default function App() {
                 <Route element={<PrivateRoute />}>
                     <Route path={paths.contacts} element={<Contacts />} />
                 </Route>
-                <Route path="*" element={<NotFound />} />
             </Route>
+            <Route path="*" element={<NotFound />} />
         </Routes >
     )
 }
