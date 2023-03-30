@@ -9,7 +9,7 @@ export default function NotFound() {
     return (
         <>
             <div className={styles.bg}>
-                <NavLink className={styles.gohome_link} to={paths.main}>
+                <NavLink className={styles.gohome_link} to={paths.contacts}>
                     <Button className={styles.gohome_btn}>
                         На головну
                     </Button>
