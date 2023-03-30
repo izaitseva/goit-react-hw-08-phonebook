@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 
-import { getAuth, isUserLogin } from "redux/auth/auth-selector"
+import { isUserLogin } from "redux/auth/auth-selector"
 import { useDispatch, useSelector } from "react-redux";
 import "./Contacts.css";
 
@@ -13,9 +13,6 @@ export const Contacts = () => {
 
     const dispatch = useDispatch();
     const isLogin = useSelector(isUserLogin);
-    const auth = useSelector(getAuth);
-
-    console.log(auth);
 
     useEffect(() => {
         if (isLogin)

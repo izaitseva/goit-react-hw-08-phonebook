@@ -18,9 +18,6 @@ const authSlice = createSlice({
             state.error = null;
         })
             .addCase(signup.fulfilled, (state, { payload }) => {
-                console.log("signup fullfilled", payload);
-                console.log("state", state);
-
                 state.loading = false;
                 state.user = payload.user;
                 state.token = payload.token;
