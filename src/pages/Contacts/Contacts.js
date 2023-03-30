@@ -26,18 +26,22 @@ export const Contacts = () => {
     return (
         <div className="container">
             <>
-                <CreateContacts />
-                <div>
-                    {contacts.length === 0 &&
-                        < p > You don't have contacts yet</p>
-                    }
-                    {contacts.length > 0 &&
-                        <>
-                            <ContactsList />
-                            <FilterContacts />
-                        </>
-                    }
-                </div>
+                {isLogin &&
+                    <>
+                        <CreateContacts />
+                        <div>
+                            {contacts.length === 0 &&
+                                < p > You don't have contacts yet</p>
+                            }
+                            {contacts.length > 0 &&
+                                <>
+                                    <ContactsList />
+                                    <FilterContacts />
+                                </>
+                            }
+                        </div>
+                    </>
+                }
             </>
         </div >
     )

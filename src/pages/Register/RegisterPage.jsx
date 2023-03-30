@@ -18,7 +18,7 @@ export const Register = () => {
     }
 
     if (isLogin) {
-        return <Navigate to={paths.main} />
+        return <Navigate to={paths.contacts} />
     }
     
     return (
