@@ -4,7 +4,6 @@ import instance from "./authAPI";
 export const fetchContacts = createAsyncThunk(
     'contacts/fetchContacts',
     async (_, thunkApi) => {
-        // const jwt = localStorage.getItem('jwt');
         try {
             const response = await instance.get('/contacts');
             return response.data;

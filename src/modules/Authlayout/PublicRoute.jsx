@@ -1,10 +1,14 @@
 import { paths } from "paths";
 import { useSelector } from "react-redux"
 import { Navigate, Outlet } from "react-router"
-import { isUserLogin } from "redux/auth/auth-selector"
+import { getAuth } from "redux/auth/auth-selector"
 
 const PublicRoute = () => {
-    const isLogin = useSelector(isUserLogin);
+    const { isLogin, token } = useSelector(getAuth);
+
+    if (!isLogin && token) {
+        return <p>...Loading</p>
+    }
 
     if (isLogin) {
         return <Navigate to={paths.contacts} />
@@ -12,4 +16,4 @@ const PublicRoute = () => {
     return <Outlet />
 }
 
-export default PublicRoute
+export default PublicRoute;

@@ -18,6 +18,9 @@ const authSlice = createSlice({
             state.error = null;
         })
             .addCase(signup.fulfilled, (state, { payload }) => {
+                console.log("signup fullfilled", payload);
+                console.log("state", state);
+
                 state.loading = false;
                 state.user = payload.user;
                 state.token = payload.token;
@@ -47,8 +50,7 @@ const authSlice = createSlice({
             })
             .addCase(current.fulfilled, (state, { payload }) => {
                 state.loading = false;
-                state.user = payload.user;
-                state.token = payload.token;
+                state.user = payload;
                 state.isLogin = true;
             })
             .addCase(current.rejected, (state, { payload }) => {

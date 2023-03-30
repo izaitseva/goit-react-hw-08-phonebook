@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 
-import { isUserLogin } from "redux/auth/auth-selector"
+import { getAuth, isUserLogin } from "redux/auth/auth-selector"
 import { useDispatch, useSelector } from "react-redux";
 import "./Contacts.css";
 
@@ -12,8 +12,10 @@ import { fetchContacts } from "api/contactsAPI";
 export const Contacts = () => {
 
     const dispatch = useDispatch();
+    const isLogin = useSelector(isUserLogin);
+    const auth = useSelector(getAuth);
 
-    const isLogin = useSelector(isUserLogin)
+    console.log(auth);
 
     useEffect(() => {
         if (isLogin)
@@ -22,26 +24,25 @@ export const Contacts = () => {
 
     const contacts = useSelector((state => state.contacts.contacts.items));
 
-
     return (
         <div className="container">
             <>
-                {isLogin &&
-                    <>
-                        <CreateContacts />
-                        <div>
-                            {contacts.length === 0 &&
-                                < p > You don't have contacts yet</p>
-                            }
-                            {contacts.length > 0 &&
-                                <>
-                                    <ContactsList />
-                                    <FilterContacts />
-                                </>
-                            }
-                        </div>
-                    </>
-                }
+                {/* {isLogin && */}
+                <>
+                    <CreateContacts />
+                    <div>
+                        {contacts.length === 0 &&
+                            < p > You don't have contacts yet</p>
+                        }
+                        {contacts.length > 0 &&
+                            <>
+                                <ContactsList />
+                                <FilterContacts />
+                            </>
+                        }
+                    </div>
+                </>
+                {/* } */}
             </>
         </div >
     )

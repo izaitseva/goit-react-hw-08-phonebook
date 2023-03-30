@@ -12,15 +12,15 @@ import AuthLayout from 'modules/Authlayout/AuthLayout';
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  // <React.StrictMode>
+  <React.StrictMode>
     <Provider store={store}>
       <PersistGate loading={null} persistor={persistor}>
         <AuthLayout>
-          <BrowserRouter basename="/">
+          <BrowserRouter basename="/goit-hw-8">
             <App />
           </BrowserRouter>
         </AuthLayout>
       </PersistGate>
     </Provider>
-  // </React.StrictMode>
+  </React.StrictMode>
 );
