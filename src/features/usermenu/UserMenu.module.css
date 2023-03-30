@@ -2,6 +2,8 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    max-width: 700px;
+    margin: auto;
 }
 
 .link {
@@ -26,4 +28,20 @@
     display: flex;
     margin-left: inherit;
     font-size: larger;
+    margin-right: 15px;
+}
+
+.logout_btn {
+    color: white;
+    background-color: blueviolet;
+    width: 145px;
+    height: 40px;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+}
+
+.logout_btn:hover {
+    border: blueviolet;
+    background-color: rgb(167, 108, 221);
 }

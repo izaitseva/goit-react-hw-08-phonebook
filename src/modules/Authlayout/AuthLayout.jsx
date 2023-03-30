@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { current } from "redux/auth/auth-operations";
+import styles from "./AuthLayout.module.css"
 
 const AuthLayout = ({ children }) => {
     const dispatch = useDispatch();
@@ -10,7 +11,7 @@ const AuthLayout = ({ children }) => {
     }, [])
 
     return (
-        <>{children}</>
+        <div className={styles.layout}>{children}</div>
     )
 }
 
