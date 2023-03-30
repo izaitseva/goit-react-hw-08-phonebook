@@ -6,16 +6,14 @@ import { NavLink } from "react-router-dom"
 import styles from "./NavigationAuth.module.css"
 
 import { isUserLogin } from "redux/auth/auth-selector"
-import { useState } from 'react';
+
 
 const Navbar = () => {
 
     const isLogin = useSelector(isUserLogin);
-    // const [showNotification, setShowNotification] = useState(false);
 
     const handleLinkClick = () => {
         if (!isLogin) {
-            // setShowNotification(true);
             Notiflix.Notify.info('Вам треба залогінитись або зареєструватись');
         }
     }
